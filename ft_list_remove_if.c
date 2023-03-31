@@ -7,37 +7,7 @@ typedef struct      s_list
     struct s_list   *next;
     void            *data;
 }  t_list;
-/*
-void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
-{
-	t_list	*aux;
-	t_list	*prv;
-	t_list	*begin;
 
-	prv = *begin_list;
-	begin = prv;
-	if (prv == NULL)
-		return;
-	if (cmp(prv->data, data_ref) == 0)
-	{
-		*begin_list = prv->next;
-		free(prv);
-	}
-	else
-		aux = prv->next;
-	while (aux)
-	{
-		if (cmp(aux->data, data_ref) == 0)
-		{
-			prv->next = aux->next;
-			free(aux);
-			return ;
-		}
-		prv = aux;
-		aux = aux->next;
-	}
-}
-*/
 void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
 	t_list	*aux; // Recebe o nó que esta sendo analisado
